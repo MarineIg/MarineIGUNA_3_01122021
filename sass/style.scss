@@ -1,0 +1,70 @@
+@import "./Utils/Variables";
+
+@import "./Base/Base";
+
+//  HEADER
+
+.header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &__icon {
+    display: none;
+  }
+  &__img {
+    width: 150px;
+  }
+}
+
+//  SECTION MAP
+
+.map {
+  width: 100%;
+  background-color: $color-background;
+
+  &__header {
+    background-color: darken($color-background, 5%);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+  }
+
+  &__icon {
+    margin: 10px 15px 10px -30px;
+  }
+}
+
+.map-main {
+  padding: 20px 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 200;
+
+  &__title {
+    width: 100%;
+    margin: 10px 0 20px 0;
+  }
+}
+
+// BOUTTON
+
+.map--btn {
+  height: 40px;
+  padding: 15px;
+  margin: 30px 0;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0px 5px 15px rgb(182, 177, 177);
+  background: linear-gradient(-1deg, #9356dc, #ff79da);
+  color: white;
+  border: none;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}

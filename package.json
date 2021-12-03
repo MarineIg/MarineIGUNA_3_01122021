@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarineIg/MarineIGUNA_3_01122021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarineIg/MarineIGUNA_3_01122021/issues"
+  },
+  "homepage": "https://github.com/MarineIg/MarineIGUNA_3_01122021#readme"
+}
