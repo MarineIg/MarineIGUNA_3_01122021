@@ -1,76 +1,11 @@
 @import "./Utils/Variables";
+@import "./Utils/Mixins";
 
 @import "./Base/Base";
+@import "./Base/Typography";
 
-//  HEADER
+@import "./Composants/Btn";
 
-.header {
-  height: 50px;
-  width: 100%;
-  box-shadow: 0 0 5px darken($color-background, 20%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+@import "./Layout/Header";
 
-  &__icon {
-    display: none;
-  }
-  &__logo {
-    font-family: "Shrikhand", cursive;
-  }
-}
-
-//  SECTION MAP
-
-.map {
-  width: 100%;
-  background-color: $color-background;
-
-  &__header {
-    height: 50px;
-    font-weight: 500;
-    background-color: darken($color-background, 5%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &__icon {
-    margin: 10px 15px 10px -30px;
-  }
-}
-
-.map-main {
-  padding: 20px 30px;
-  font-weight: 200;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  &__title {
-    width: 100%;
-    margin: 10px 0 20px 0;
-  }
-}
-
-// BOUTTON
-
-.map--btn {
-  height: 40px;
-  padding: 15px;
-  margin: 30px 0;
-  border-radius: 20px 20px 20px 20px;
-  box-shadow: 0px 5px 15px darken($color-background, 30%);
-  background: $color-btn;
-  color: white;
-  border: none;
-  align-items: center;
-  display: flex;
-  cursor: pointer;
-  &:hover {
-    filter: brightness(1.1);
-    box-shadow: 0px 5px 15px darken($color-background, 60%);
-  }
-}
+@import "./Pages/Accueil";

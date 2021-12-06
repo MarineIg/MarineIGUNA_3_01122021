@@ -8,22 +8,45 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.header__logo {
+  font-family: "Shrikhand", cursive;
+}
+
+/** BOUTTON **/
+.map--btn {
+  height: 40px;
+  padding: 15px;
+  margin: 30px 0;
+  border-radius: 20px 20px 20px 20px;
+  background: linear-gradient(#ff79da, #9356dc);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 15px #aaaaaa;
+}
+.map--btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 5px 15px #5d5d5d;
+}
+
+/**  HEADER **/
 .header {
   height: 50px;
   width: 100%;
   box-shadow: 0 0 5px #c3c3c3;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: relative;
 }
 .header__icon {
   display: none;
 }
-.header__logo {
-  font-family: "Shrikhand", cursive;
-}
 
+/**  SECTION MAP **/
 .map {
   width: 100%;
   background-color: #f6f6f6;
@@ -39,36 +62,70 @@ body {
 .map__icon {
   margin: 10px 15px 10px -30px;
 }
-
-.map-main {
+.map__main {
   padding: 20px 30px;
   font-weight: 200;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-.map-main__title {
+.map__main__title {
   width: 100%;
   margin: 10px 0 20px 0;
 }
 
-.map--btn {
-  height: 40px;
-  padding: 15px;
-  margin: 30px 0;
-  border-radius: 20px 20px 20px 20px;
-  box-shadow: 0px 5px 15px #aaaaaa;
-  background: linear-gradient(#ff79da, #9356dc);
-  color: white;
-  border: none;
-  align-items: center;
-  display: flex;
-  cursor: pointer;
+/** SECTION FONCTIONNEMENT **/
+.working {
+  margin: 50px 30px;
 }
-.map--btn:hover {
-  filter: brightness(1.1);
-  box-shadow: 0px 5px 15px #5d5d5d;
+.working__title {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+.working__list {
+  margin-left: 10px;
+}
+.working__item {
+  font-size: 12px;
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-shadow: 0px 5px 15px #aaaaaa;
+}
+.working__icon {
+  padding: 16px 20px 16px 30px;
+  width: 100%;
+  height: 50px;
+  color: grey;
+  font-size: 16px;
+  border-radius: 15px;
+}
+.working__icon:hover {
+  color: #9356dc;
+  background-color: #f2eafb;
+}
+.working__text {
+  position: absolute;
+  margin: 0 60px;
+}
+.working__number {
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  margin: -10px;
+  min-width: 20px;
+  z-index: 1000;
+  color: white;
+  background-color: #9356dc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

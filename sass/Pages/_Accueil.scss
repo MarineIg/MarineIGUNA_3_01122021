@@ -1,0 +1,88 @@
+/**  SECTION MAP **/
+
+.map {
+  width: 100%;
+  background-color: $color-background;
+
+  &__header {
+    height: 50px;
+    font-weight: 500;
+    background-color: darken($color-background, 5%);
+    @include flex-center;
+  }
+
+  &__icon {
+    margin: 10px 15px 10px -30px;
+  }
+
+  &__main {
+    padding: 20px 30px;
+    font-weight: 200;
+    text-align: center;
+    @include flex-center;
+    flex-direction: column;
+
+    &__title {
+      width: 100%;
+      margin: 10px 0 20px 0;
+    }
+  }
+}
+
+/** SECTION FONCTIONNEMENT **/
+
+.working {
+  margin: 50px 30px;
+
+  &__title {
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    margin-left: 10px;
+  }
+
+  &__item {
+    font-size: 12px;
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background-color: $color-background;
+    display: flex;
+    align-items: center;
+    position: relative;
+    @include btn-shadow;
+  }
+
+  &__icon {
+    padding: 16px 20px 16px 30px;
+    width: 100%;
+    height: 50px;
+    color: grey;
+    font-size: 16px;
+    border-radius: 15px;
+
+    &:hover {
+      color: $color-primary;
+      background-color: lighten($color-primary, 35%);
+    }
+  }
+
+  &__text {
+    position: absolute;
+    margin: 0 60px;
+  }
+
+  &__number {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    margin: -10px;
+    min-width: 20px;
+    z-index: 1000;
+    color: white;
+    background-color: $color-primary;
+    @include flex-center;
+  }
+}
