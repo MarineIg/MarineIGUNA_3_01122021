@@ -32,21 +32,28 @@
 /** SECTION FONCTIONNEMENT **/
 
 .working {
-  margin: 50px 30px;
+  margin: 50px 0px;
 
   &__title {
     font-size: 21px;
-    margin-bottom: 20px;
+    margin: 0 30px 20px 30px;
   }
 
   &__list {
-    margin-left: 10px;
+    margin: 0 10px;
+
+    @media screen and(min-width:768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
   }
 
   &__item {
     font-size: 12px;
     height: 50px;
-    margin-bottom: 20px;
+    margin: 20px 20px;
+    width: 90%;
     border-radius: 15px;
     background-color: $color-background;
     display: flex;
@@ -84,5 +91,100 @@
     color: white;
     background-color: $color-primary;
     @include flex-center;
+  }
+}
+
+/** RESTAURANTS **/
+
+.restaurants {
+  width: 100%;
+  height: auto;
+  padding: 30px 0;
+  background-color: $color-background;
+
+  &__title {
+    @extend .working__title;
+  }
+}
+.restaurants-flex {
+  display: grid;
+  grid-template-columns: 1fr;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.cards-restaurants {
+  width: 91%;
+  height: 200px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  @include btn-shadow;
+
+  &__img {
+    width: 100%;
+    height: 135px;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+
+    &--new {
+      height: 25px;
+      width: 70px;
+      font-size: 12px;
+      padding: 5px;
+      border-radius: 2px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      text-align: center;
+      color: darken($color-tertiary, 40%);
+      background-color: $color-tertiary;
+    }
+  }
+
+  &__contents {
+    padding: 10px 15px;
+  }
+
+  &__subtile {
+    font-weight: lighter;
+  }
+
+  &__btn-icon {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    &:hover {
+      background-image: $color-btn-reverse;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-color: transparent;
+    }
+
+    &--active {
+      right: 1.5px;
+      bottom: 2px;
+      position: absolute;
+      font-size: 21px;
+      background-color: transparent;
+      color: white;
+      transform: scale(1);
+      transition: transform 400ms;
+      &:hover {
+        background-image: $color-btn-reverse;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 22px;
+        transform: scale(1.1);
+      }
+    }
   }
 }
