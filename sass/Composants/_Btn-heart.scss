@@ -1,0 +1,36 @@
+.btn-heart {
+  position: absolute;
+  right: 25px;
+  bottom: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    background-image: $color-btn-reverse;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: transparent;
+  }
+
+  &--active {
+    right: 1.5px;
+    bottom: 2px;
+    position: absolute;
+    font-size: 21px;
+    background-color: transparent;
+    color: transparent;
+    transform: scale(1);
+    transition: transform 500ms;
+    &:hover {
+      background-image: $color-btn-reverse;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 22px;
+      transform: scale(1.15);
+    }
+  }
+}

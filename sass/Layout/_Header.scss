@@ -6,8 +6,9 @@
   box-shadow: 0 0 5px darken($color-background, 20%);
   @include flex-center;
   position: relative;
-
   &__icon {
-    display: none;
+    position: absolute;
+    left: 20px;
+    color: rgba(0, 0, 0, 0.816);
   }
 }

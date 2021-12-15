@@ -106,7 +106,7 @@
     @extend .working__title;
   }
 }
-.restaurants-flex {
+.restaurants-grid {
   display: grid;
   grid-template-columns: 1fr;
   @media screen and (min-width: 768px) {
@@ -150,41 +150,5 @@
 
   &__subtile {
     font-weight: lighter;
-  }
-
-  &__btn-icon {
-    position: absolute;
-    right: 25px;
-    bottom: 20px;
-    font-size: 24px;
-    cursor: pointer;
-    background-color: white;
-    border: none;
-    &:hover {
-      background-image: $color-btn-reverse;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-color: transparent;
-    }
-
-    &--active {
-      right: 1.5px;
-      bottom: 2px;
-      position: absolute;
-      font-size: 21px;
-      background-color: transparent;
-      color: white;
-      transform: scale(1);
-      transition: transform 400ms;
-      &:hover {
-        background-image: $color-btn-reverse;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 22px;
-        transform: scale(1.1);
-      }
-    }
   }
 }
