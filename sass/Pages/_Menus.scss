@@ -1,36 +1,52 @@
+/** EN TETE **/
+
 .img-header {
   width: 100%;
-  object-fit: cover;
   height: 200px;
+  object-fit: cover;
 }
 
+/** MENUS **/
+
 .cards-menu {
-  background-color: $color-background;
   width: 100%;
   height: auto;
-  border-radius: 30px 30px 0px 0px;
-  position: relative;
   margin-top: -30px;
   padding: 0 10px;
+  border-radius: 30px 30px 0px 0px;
+  background-color: $color-background;
+  position: relative;
 
   &__header {
+    padding: 30px 50px 30px 15px;
+    position: relative;
     display: flex;
     align-items: center;
-    padding: 30px 50px 30px 0;
-    position: relative;
   }
 }
 .btn-heart--position {
-  position: absolute;
   margin-bottom: 13px;
+  position: absolute;
+}
+// RESPONSIVE
+@media screen and(min-width:768px) {
+  .menu__grid {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .menu {
-  animation: appear 1s reverse both;
   width: 100%;
+  animation: appear 1s reverse both;
+  // RESPONSIVE
+  @media screen and(min-width:768px) {
+    width: 33%;
+  }
+
   &__title {
     font-weight: lighter;
-    padding: 5px 0;
+    padding: 5px 15px;
     &::after {
       content: "";
       border-bottom: 3px $color-tertiary solid;
@@ -43,16 +59,14 @@
     margin: 10px 0;
   }
   &__item {
-    background-color: white;
     margin: 15px;
     border-radius: 10px;
-    @include btn-shadow;
+    background-color: white;
     display: flex;
     justify-content: space-between;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
     cursor: pointer;
+    @include btn-shadow;
+    @include overflow;
     &:hover .menu__check {
       margin-right: 0;
     }
@@ -71,57 +85,38 @@
   }
 
   &__description {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
     padding: 10px;
+    @include overflow;
   }
 
   &__price {
+    padding: 10px;
     margin-left: auto;
     display: flex;
     align-items: flex-end;
-    padding: 10px;
   }
 
   &__dish {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    @include overflow;
   }
 
   &__subtile {
-    font-weight: lighter;
     font-size: 14px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    font-weight: lighter;
+    @include overflow;
   }
 
   &__check {
-    background-color: $color-tertiary;
     width: 70px;
-    border-radius: 0 10px 10px 0;
     margin-right: -70px;
+    border-radius: 0 10px 10px 0;
+    background-color: $color-tertiary;
     transition: all 1s;
     flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     &--color {
-      color: white;
       font-size: 24px;
+      color: white;
     }
-  }
-}
-
-@keyframes appear {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(15px);
-    opacity: 0;
   }
 }

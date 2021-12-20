@@ -1,12 +1,12 @@
 .footer {
   width: 100%;
   height: auto;
-  background-color: rgb(54, 52, 52);
   padding: 20px;
+  background-color: rgb(54, 52, 52);
   &__title {
-    color: white;
     font-size: 20px;
     padding-bottom: 10px;
+    color: white;
   }
   &__icon {
     margin-right: 10px;

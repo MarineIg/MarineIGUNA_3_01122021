@@ -42,6 +42,7 @@
   &__list {
     margin: 0 10px;
 
+    // RESPONSIVE
     @media screen and(min-width:768px) {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
