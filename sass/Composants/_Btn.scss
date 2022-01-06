@@ -15,6 +15,7 @@
   cursor: pointer;
   @include flex-center;
   @include btn-shadow;
+  transition: 0.4s;
   &--large {
     padding: 0 40px;
   }

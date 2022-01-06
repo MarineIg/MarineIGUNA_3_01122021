@@ -83,6 +83,7 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: 0px 5px 15px #aaaaaa;
+  transition: 0.4s;
 }
 .btn-order--large {
   padding: 0 40px;
